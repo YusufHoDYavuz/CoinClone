@@ -17,7 +17,8 @@ public class EarnCoin : MonoBehaviour
         {
             yield return new WaitForEndOfFrame();
                 transform.position = new Vector3(Mathf.Lerp(transform.position.x, followedCoin.position.x, followSpeed * Time.deltaTime),
-                transform.position.y, Mathf.Lerp(transform.position.z, followedCoin.position.z, followSpeed * Time.deltaTime));
+                Mathf.Lerp(transform.position.y, followedCoin.position.y, followSpeed * Time.deltaTime), 
+                Mathf.Lerp(transform.position.z, followedCoin.position.z + 0.08f, followSpeed * Time.deltaTime));
         }
     }
 
