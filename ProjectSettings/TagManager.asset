@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ChildCoin
   - Block
+  - Stairs
   layers:
   - Default
   - TransparentFX

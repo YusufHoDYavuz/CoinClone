@@ -50,5 +50,13 @@ public class MainCoin : MonoBehaviour
                 BC.ChildCoinCollide(coinsList[i].gameObject);
             }
         }
+
+        if (other.transform.CompareTag("Stairs"))
+        {
+            other.transform.GetComponent<Collider>().isTrigger = false;
+            transform.position += new Vector3(0, transform.position.y - 0.4f, -transform.localPosition.z - 5);
+        }
     }
+
+    
 }
