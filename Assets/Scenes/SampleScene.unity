@@ -135,11 +135,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainCoin
       objectReference: {fileID: 0}
-    - target: {fileID: 4925075252738034298, guid: a2fc7453ca15f7c4c85a8090091539fd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 5697811597753635008, guid: a2fc7453ca15f7c4c85a8090091539fd,
         type: 3}
       propertyPath: m_RootOrder
@@ -195,16 +190,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6760620225832051565, guid: a2fc7453ca15f7c4c85a8090091539fd,
-        type: 3}
-      propertyPath: _speed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8923464375611597569, guid: a2fc7453ca15f7c4c85a8090091539fd,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2fc7453ca15f7c4c85a8090091539fd, type: 3}
 --- !u!1001 &178596437
@@ -214,11 +199,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1173989074694567912, guid: 023eb9716645ae14097093370af00e74,
-        type: 3}
-      propertyPath: CS
-      value: 
-      objectReference: {fileID: 5697811597862908385}
     - target: {fileID: 6088668098777338219, guid: 023eb9716645ae14097093370af00e74,
         type: 3}
       propertyPath: m_Name
@@ -550,6 +530,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 178596439, guid: 023eb9716645ae14097093370af00e74, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 5e26616b5acf3ee428cbcf181bb74ff2,
+        type: 2}
     - target: {fileID: 178596439, guid: 023eb9716645ae14097093370af00e74, type: 3}
       propertyPath: m_IsTrigger
       value: 1
