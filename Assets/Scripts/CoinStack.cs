@@ -1,18 +1,40 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CoinStack : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public List<GameObject> coinList = new List<GameObject>();
 
-    // Update is called once per frame
-    void Update()
+    private Vector3 firstCoinPos;
+    private Vector3 currentCoinPos;
+
+    private int coinListIndexCounter = 0;
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("ChildCoin"))
+        {
+            coinList.Add(other.gameObject);
+            Debug.Log("Earned Coin");
+
+            if (coinList.Contains(other.gameObject))
+            {
+                if (coinList.Count == 1)
+                {
+                    firstCoinPos = GetComponent<MeshRenderer>().bounds.max;
+                    currentCoinPos = new Vector3(other.transform.position.x, firstCoinPos.y - 0.15f, other.transform.position.z);
+                    other.gameObject.transform.position = currentCoinPos;
+                    currentCoinPos = new Vector3(other.transform.position.x, transform.position.y, other.transform.position.z);
+                    other.gameObject.GetComponent<EarnCoin>().UpdateCoinPosition(transform, true);
+                }
+                else if (coinList.Count > 1)
+                {
+                    other.gameObject.transform.position = currentCoinPos;
+                    currentCoinPos = new Vector3(other.transform.position.x, other.gameObject.transform.position.y, other.transform.position.z + 0.3f);
+                    other.gameObject.GetComponent<EarnCoin>().UpdateCoinPosition(coinList[coinListIndexCounter].transform, true);
+                    coinListIndexCounter++;
+                }
+            }
+        }
     }
 }

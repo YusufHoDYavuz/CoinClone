@@ -6,12 +6,6 @@ public class MainCoin : MonoBehaviour
 {
     [SerializeField] private float maxAngle;
     [SerializeField] private float coinsSpeed;
-    Rigidbody rb;
-
-    void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
 
     void FixedUpdate()
     {
