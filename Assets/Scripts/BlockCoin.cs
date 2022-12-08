@@ -14,12 +14,16 @@ public class BlockCoin : MonoBehaviour
         {
             Debug.Log(other.gameObject.name + " and " + transform.gameObject.name + " collided / -1 Coin");
 
-            Destroy(other.gameObject.GetComponent<EarnCoin>());
-            other.gameObject.GetComponent<BoxCollider>().isTrigger = false;
-            other.gameObject.GetComponent<Rigidbody>().useGravity = true;
-            CS.coinList.Remove(other.gameObject);
-            other.gameObject.transform.SetParent(null);
-
+            ChildCoinCollide(other.gameObject);
         }
+    }
+
+    public void ChildCoinCollide(GameObject other)
+    {
+        Destroy(other.gameObject.GetComponent<EarnCoin>());
+        other.gameObject.GetComponent<Collider>().isTrigger = false;
+        other.gameObject.GetComponent<Rigidbody>().useGravity = true;
+        CS.coinList.Remove(other.gameObject);
+        other.gameObject.transform.SetParent(null);
     }
 }

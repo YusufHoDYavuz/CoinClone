@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7537689155323495540}
   - component: {fileID: 5728498531867553982}
   - component: {fileID: 178596440}
-  - component: {fileID: 178596439}
   - component: {fileID: 1173989074694567912}
+  - component: {fileID: 253930156}
   m_Layer: 0
   m_Name: ChildCoin
   m_TagString: ChildCoin
@@ -102,19 +102,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &178596439
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6088668098777338219}
-  m_Material: {fileID: 13400000, guid: 5e26616b5acf3ee428cbcf181bb74ff2, type: 2}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.003055707, y: 0.003055707, z: 0.00030557087}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1173989074694567912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,3 +115,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followSpeed: 3
+--- !u!64 &253930156
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6088668098777338219}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5216581434543980006, guid: 44c585b3a95d7ac4e8059b99b7ccf2aa, type: 3}

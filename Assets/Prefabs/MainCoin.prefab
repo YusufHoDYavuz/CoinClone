@@ -186,6 +186,7 @@ GameObject:
   - component: {fileID: 2878081539448567550}
   - component: {fileID: 8923464375611597569}
   - component: {fileID: 6760620225832051565}
+  - component: {fileID: 5697811597862908391}
   m_Layer: 0
   m_Name: MainCoin
   m_TagString: Player
@@ -303,6 +304,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxAngle: 1.5
   coinsSpeed: 1.5
+  CS: {fileID: 6760620225832051565}
+  BC: {fileID: 0}
 --- !u!114 &6760620225832051565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,3 +319,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinList: []
+--- !u!64 &5697811597862908391
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4925075252738034298}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5216581434543980006, guid: 7c19c6dc1383f4c48be6a7268c91ec23, type: 3}
