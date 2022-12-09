@@ -306,8 +306,6 @@ MonoBehaviour:
   coinsSpeed: 1.5
   CS: {fileID: 6760620225832051565}
   BC: {fileID: 0}
-  distanceBar: {fileID: 0}
-  finishPoint: {fileID: 0}
 --- !u!114 &6760620225832051565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,6 +319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinList: []
+  coinCount: {fileID: 0}
 --- !u!64 &5697811597862908391
 MeshCollider:
   m_ObjectHideFlags: 0
