@@ -1,14 +1,22 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CoinStack : MonoBehaviour
 {
     public List<GameObject> coinList = new List<GameObject>();
 
+    public Text coinCount;
+
     private Vector3 firstCoinPos;
     private Vector3 currentCoinPos;
 
     private int coinListIndexCounter = 0;
+
+    private void Update()
+    {
+        coinCount.text = "Coin Count: " + coinList.Count.ToString();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
