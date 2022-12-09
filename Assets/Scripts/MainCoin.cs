@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainCoin : MonoBehaviour
 {
@@ -55,8 +56,7 @@ public class MainCoin : MonoBehaviour
         {
             other.transform.GetComponent<Collider>().isTrigger = false;
             transform.position += new Vector3(0, 0.25f, 0);
+
         }
     }
-
-    
 }
