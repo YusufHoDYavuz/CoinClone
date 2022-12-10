@@ -10,7 +10,6 @@ public class EarnCoin : MonoBehaviour
         StartCoroutine(StartFollowingToLastCoinPosition(followedCoin, isFollowStart));
     }
 
-
     IEnumerator StartFollowingToLastCoinPosition(Transform followedCoin, bool isFollowStart)
     {
         while (isFollowStart)

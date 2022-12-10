@@ -22,26 +22,23 @@ public class CoinStack : MonoBehaviour
     {
         if (other.CompareTag("ChildCoin"))
         {
-            coinList.Add(other.gameObject);
             Debug.Log("Earned Coin");
+            coinList.Add(other.gameObject);
 
-            if (coinList.Contains(other.gameObject))
+            if (coinList.Count == 1)
             {
-                if (coinList.Count == 1)
-                {
-                    firstCoinPos = GetComponent<MeshRenderer>().bounds.max;
-                    currentCoinPos = new Vector3(other.transform.position.x, firstCoinPos.y - 0.15f, other.transform.position.z);
-                    other.gameObject.transform.position = currentCoinPos;
-                    currentCoinPos = new Vector3(other.transform.position.x, transform.position.y, other.transform.position.z);
-                    other.gameObject.GetComponent<EarnCoin>().UpdateCoinPosition(transform, true);
-                }
-                else if (coinList.Count > 1)
-                {
-                    other.gameObject.transform.position = currentCoinPos;
-                    currentCoinPos = new Vector3(other.transform.position.x, other.gameObject.transform.position.y, other.transform.position.z + 0.3f);
-                    other.gameObject.GetComponent<EarnCoin>().UpdateCoinPosition(coinList[coinListIndexCounter].transform, true);
-                    coinListIndexCounter++;
-                }
+                firstCoinPos = GetComponent<MeshRenderer>().bounds.max;
+                currentCoinPos = new Vector3(other.transform.position.x, firstCoinPos.y - 0.15f, other.transform.position.z);
+                other.gameObject.transform.position = currentCoinPos;
+                currentCoinPos = new Vector3(other.transform.position.x, transform.position.y, other.transform.position.z);
+                other.gameObject.GetComponent<EarnCoin>().UpdateCoinPosition(transform, true);
+            }
+            else if (coinList.Count > 1)
+            {
+                other.gameObject.transform.position = currentCoinPos;
+                currentCoinPos = new Vector3(other.transform.position.x, other.gameObject.transform.position.y, other.transform.position.z + 0.3f);
+                other.gameObject.GetComponent<EarnCoin>().UpdateCoinPosition(coinList[coinListIndexCounter].transform, true);
+                coinListIndexCounter++;
             }
         }
     }

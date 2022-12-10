@@ -54,9 +54,9 @@ public class BlocksController : MonoBehaviour
     {
         for (int i = 0; i < axes.Count; i++)
         {
-            axes[i].transform.DORotate(new Vector3(340, 0, 0), 1).SetEase(Ease.OutBounce);
+            axes[i].transform.DORotate(new Vector3(-20, 90, 0), 1).SetEase(Ease.OutBounce);
             yield return new WaitForSeconds(1);
-            axes[i].transform.DORotate(new Vector3(270, 0, 0), 1).SetEase(Ease.InSine);
+            axes[i].transform.DORotate(new Vector3(-90, 90, 0), 1).SetEase(Ease.InSine);
         }
     }
 
@@ -64,9 +64,9 @@ public class BlocksController : MonoBehaviour
     {
         for (int i = 0; i < door.Count; i++)
         {
-            door[i].transform.DOLocalMove(new Vector3(door[i].transform.position.x, 1, door[i].transform.position.z), 1).SetEase(Ease.OutBounce);
+            door[i].transform.DOLocalMove(new Vector3(0, -1f, 0), 1).SetEase(Ease.OutBounce);
             yield return new WaitForSeconds(1);
-            door[i].transform.DOLocalMove(new Vector3(door[i].transform.position.x, 2, door[i].transform.position.z), 1).SetEase(Ease.InSine);
+            door[i].transform.DOLocalMove(new Vector3(0, -0.25f, 0), 1).SetEase(Ease.InSine);
         }
     }
 

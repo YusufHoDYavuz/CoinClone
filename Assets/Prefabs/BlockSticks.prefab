@@ -98,7 +98,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5017f3f0e3254e4c856b1705fe94ada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnSpeed: 1
+  stickTurnSpeed: 0
+  sticks: []
+  axes: []
+  door: []
+  leftBlocks: []
+  rightBlocks: []
 --- !u!65 &8348544158493084969
 BoxCollider:
   m_ObjectHideFlags: 0

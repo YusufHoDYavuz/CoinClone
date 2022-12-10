@@ -114,7 +114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebef6b56f1fee994a929dccc612650d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 3
+  followSpeed: 2.5
+  coinSpeed: 0
+  mainCoin: {fileID: 0}
 --- !u!64 &253930156
 MeshCollider:
   m_ObjectHideFlags: 0
