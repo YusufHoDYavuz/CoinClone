@@ -20,10 +20,10 @@ public class BlockCoin : MonoBehaviour
 
     public void ChildCoinCollide(GameObject other)
     {
-        Destroy(other.gameObject.GetComponent<EarnCoin>());
         other.gameObject.GetComponent<Collider>().isTrigger = false;
-        other.gameObject.GetComponent<Rigidbody>().useGravity = true;
-        CS.coinList.Remove(other.gameObject);
+        Destroy(other.gameObject.GetComponent<EarnCoin>());
         other.gameObject.transform.SetParent(null);
+        CS.coinList.Remove(other.gameObject);
+        other.gameObject.GetComponent<Rigidbody>().useGravity = true;
     }
 }
