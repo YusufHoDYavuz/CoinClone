@@ -311,6 +311,7 @@ MonoBehaviour:
   stairsEarnCount: {fileID: 0}
   CS: {fileID: 6760620225832051565}
   BC: {fileID: 0}
+  uiManager: {fileID: 0}
 --- !u!114 &6760620225832051565
 MonoBehaviour:
   m_ObjectHideFlags: 0

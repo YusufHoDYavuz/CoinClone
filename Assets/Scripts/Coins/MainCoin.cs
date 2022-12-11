@@ -13,6 +13,7 @@ public class MainCoin : MonoBehaviour
     [SerializeField] private Text stairsEarnCount;
     [SerializeField] private CoinStack CS;
     [SerializeField] private BlockCoin BC;
+    [SerializeField] private UIManager uiManager;
 
     private bool isCollide;
     private bool isCollideStairs;
@@ -51,6 +52,7 @@ public class MainCoin : MonoBehaviour
             Debug.Log(transform.gameObject.name + "and" + other.gameObject.name + "Collide");
             rb.constraints = RigidbodyConstraints.None;
             MainBlockCollider();
+            uiManager.openFailGameUI();
 
             for (int i = 0; i < coinsList.Count; i++)
             {
@@ -91,7 +93,9 @@ public class MainCoin : MonoBehaviour
             }
             else if (coinsList.Count == 0)
             {
-                Time.timeScale = 0;
+                uiManager.openFinishGameUI();
+                Time.timeScale = 0.001f;
+
             }
         }
     }
