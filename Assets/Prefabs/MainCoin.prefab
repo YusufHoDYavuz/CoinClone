@@ -308,6 +308,7 @@ MonoBehaviour:
   earnCoinPrefab: {fileID: 6088668098777338219, guid: 023eb9716645ae14097093370af00e74,
     type: 3}
   mainCoinPrefab: {fileID: 4925075252738034298}
+  stairsEarnCount: {fileID: 0}
   CS: {fileID: 6760620225832051565}
   BC: {fileID: 0}
 --- !u!114 &6760620225832051565

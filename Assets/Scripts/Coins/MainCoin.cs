@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using DG.Tweening;
 
 public class MainCoin : MonoBehaviour
@@ -9,11 +10,13 @@ public class MainCoin : MonoBehaviour
     [SerializeField] private float coinsSpeed;
     [SerializeField] private GameObject earnCoinPrefab;
     [SerializeField] private GameObject mainCoinPrefab;
+    [SerializeField] private Text stairsEarnCount;
     [SerializeField] private CoinStack CS;
     [SerializeField] private BlockCoin BC;
 
     private bool isCollide;
     private bool isCollideStairs;
+    private int stairsEarnCounter;
     private List<GameObject> coinsList;
     private Rigidbody rb;
 
@@ -73,6 +76,8 @@ public class MainCoin : MonoBehaviour
                 newMainCoin.transform.GetComponent<PlayerController>().enabled = false;
                 newMainCoin.transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                 isCollideStairs = true;
+                stairsEarnCounter++;
+                stairsEarnCount.text = stairsEarnCounter.ToString();
             }
             else if(coinsList.Count > 0)
             {
@@ -81,6 +86,8 @@ public class MainCoin : MonoBehaviour
                 GameObject newEarnCoin = Instantiate(earnCoinPrefab, Vector3.zero, Quaternion.identity);
                 newEarnCoin.transform.DOMove(new Vector3(other.transform.position.x + 0.5f, other.transform.position.y + 0.15f, other.transform.position.z), 1).SetEase(Ease.InBounce);
                 newEarnCoin.transform.DORotate(new Vector3(90, 0, 0), 1);
+                stairsEarnCounter++;
+                stairsEarnCount.text = stairsEarnCounter.ToString();
             }
             else if (coinsList.Count == 0)
             {
