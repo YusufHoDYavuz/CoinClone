@@ -7,13 +7,8 @@ public class CameraController : MonoBehaviour
     [SerializeField] private Transform target;
     [SerializeField] private float smoothSpeed;
     [SerializeField] private float cameraAngle;
-    Vector3 offset;
+    public Vector3 offset;
     Vector3 currentVelocity = Vector3.zero;
-
-    void Awake()
-    {
-        offset = transform.position - target.position;
-    }
 
     void FixedUpdate()
     {
